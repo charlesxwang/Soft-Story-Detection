@@ -1,0 +1,24 @@
+if [ -d models ]; 
+	then echo 'slim exists.'; 
+else 
+	echo 'Not found, downloading ...';
+	git clone https://github.com/tensorflow/models/ 
+fi
+
+if [ -d pretrained ]; then
+	echo 'pretrained model folder exists';
+else
+	mkdir pretrained
+	wget http://download.tensorflow.org/models/resnet_v2_152_2017_04_14.tar.gz
+	mv resnet_v2_152_2017_04_14.tar.gz pretrained/.
+fi 
+
+if [ -d models/research/slim/src ]; then
+	rm -rf models/research/slim/src;
+fi
+
+cp -R src/* models/research/slim/.
+
+cp -R pretrained models/research/slim/.
+
+

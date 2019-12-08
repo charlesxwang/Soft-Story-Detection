@@ -14,7 +14,7 @@ set -e
 PRETRAINED_CHECKPOINT_DIR=./pretrained/
 
 # Where the checkpoint to be evaluated.
-TRAIN_DIR=/PATH/TO/TRAINED/MODEL/
+TRAIN_DIR=/Users/simcenter/Codes/SimCenter/Soft-Story-Detection/models/research/slim/pretrained/
 
 # Where the dataset is saved to.
 DATASET_DIR=./tfrecords/Santa_Monica/
@@ -29,7 +29,7 @@ SET=validation
 # Run evaluation.
 
 echo "Extracting ${SET} Features..."
-/usr/bin/python eval_image_classifier.py \
+python eval_image_classifier.py \
   --checkpoint_path=${TRAIN_DIR} \
   --eval_dir=${TRAIN_DIR} \
   --dataset_name=${DATASET_NAME} \
