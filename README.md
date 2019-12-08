@@ -72,6 +72,6 @@ Note: The models are trained on Santa Monica dataset and tested on 395 street vi
 ### Application
 Given a specific city/region, a soft-story building distribution map can be created based on the prediction of the trained model. The below figure shows the distribution map of Oakland, which is created by [*SURF*](https://github.com/charlesxwang/SURF).
 
-![predicted SS distribution map of Oakland](heatmap-oakland.png)
+![predicted SS distribution map of Oakland](src/heatmap-oakland.png)
 
 
